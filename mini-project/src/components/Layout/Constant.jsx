@@ -12,8 +12,8 @@ export const MENU_ITEM = [
         key: "/news",
     },
     {
-        label: <Link to="/inventaries">Inventaries</Link>,
-        key: "/inventaries",
+        label: <Link to="/inventaris">Inventaries</Link>,
+        key: "/inventaris",
     },
     {
         label: <Link to="/divisions">EDSA Divisions</Link>,

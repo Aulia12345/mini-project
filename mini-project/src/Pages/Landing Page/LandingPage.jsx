@@ -5,7 +5,6 @@ import { InstagramOutlined, YoutubeOutlined } from '@ant-design/icons'
 import { Prodi, Bph } from './Constant';
 import logo from '../../assets/EDSA logo baru item.png'
 import Arrow from '../../components/arrow/arrow';
-import './LandingPage.scss'
 import wave from '../../assets/wave.png'
 
 const LandingPage = () => {
