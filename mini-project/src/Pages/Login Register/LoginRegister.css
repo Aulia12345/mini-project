@@ -1,0 +1,50 @@
+.container-center {
+    padding: 40px 40px 50px 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: url('../../assets/EDSA logo baru item.png');
+    background-position: left;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.titlelogreg {
+    font-size: 20px;
+    font-family: 'Gill Sans', sans-serif;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.bodylogreg {
+    width: 500px;
+    background-color: white;
+    box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.4);
+    border-radius: 25px;
+}
+
+.titlelogreg,
+Form {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.shapelogreg {
+    background-color: black;
+    width: 400px;
+    height: 3px;
+}
+
+.shapelogreg,
+.titlelogreg {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.ant-select-selector {
+    border: 1px solid black !important;
+}

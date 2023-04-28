@@ -4,8 +4,8 @@ import './header/Header.css'
 
 export const MENU_ITEM = [
     {
-        label: <Link to="/">Home</Link>,
-        key: "/",
+        label: <Link to="/home">Home</Link>,
+        key: "/home",
     },
     {
         label: <Link to="/news">News</Link>,
@@ -14,6 +14,7 @@ export const MENU_ITEM = [
     {
         label: <Link to="/inventaris">Inventaries</Link>,
         key: "/inventaris",
+        dropdown: <div><Link to='/inventaris-admin'>Inventaris Admin</Link></div>,
     },
     {
         label: <Link to="/divisions">EDSA Divisions</Link>,
