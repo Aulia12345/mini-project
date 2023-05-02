@@ -4,19 +4,20 @@ import LayoutComponent from '../components/Layout/LayoutComponent';
 import { Suspense, useEffect } from 'react';
 import InventarisAdmin from '../Pages/Inventaris/InventarisAdmin';
 import Inventaris from '../Pages/Inventaris/Inventaris'
-import LoginPage from '../Pages/Login Register/LoginRegister'
 import LoginRegister from '../Pages/Login Register/LoginRegister';
+import Aspirasi from '../Pages/Aspirasi/Aspirasi';
+import AspirasiAdmin from '../Pages/Aspirasi/AspirasiAdmin';
 
 const RouteManagement = () => {
     const token = localStorage.getItem('token');
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
 
-    useEffect(() => {
-        if (!token) {
-            navigate('/');
-        }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [token]);
+    // useEffect(() => {
+    //     if (!token) {
+    //         navigate('/home');
+    //     }
+    //     // eslint-disable-next-line react-hooks/exhaustive-deps
+    // }, [token]);
 
     return (
         <div>
@@ -24,11 +25,11 @@ const RouteManagement = () => {
                 {!token ? (
                     <LayoutComponent>
                         <Routes>
-                            <Route path='/' element={<LoginPage />} />
-                            <Route path='/home' element={<LandingPage />} />
+                            <Route path='/' element={<LandingPage />} />
                             <Route path='/inventaris' element={<Inventaris />} />
-                            <Route path='/inventaris-admin' element={<InventarisAdmin />} />
                             <Route path='/login-register' element={<LoginRegister />} />
+                            <Route path='/aspirasi' element={<Aspirasi />} />
+                            <Route path='/aspirasi-admin' element={<AspirasiAdmin />} />
                         </Routes>
                     </LayoutComponent>
                 ) : (
@@ -37,6 +38,8 @@ const RouteManagement = () => {
                             <Route path='/home' element={<LandingPage />} />
                             <Route path='/inventaris' element={<Inventaris />} />
                             <Route path='/login-register' element={<LoginRegister />} />
+                            <Route path='/inventaris-admin' element={<InventarisAdmin />} />
+                            <Route path='/aspirasi' element={<Aspirasi />} />
                         </Routes>
                     </LayoutComponent>
                 )};

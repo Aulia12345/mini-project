@@ -1,4 +1,4 @@
-import { Button, Card, Form, Input, Select, Modal, message, } from "antd";
+import { Button, Form, Input, Modal, message, Row, Radio } from "antd";
 import { ADD_ADMIN, GET_ADMIN } from './query/admin-query';
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -6,12 +6,6 @@ import { useMutation, useQuery } from "@apollo/client";
 import './LoginRegister.css'
 
 const LoginRegister = () => {
-
-    // select form
-    const handleChange = (value) => {
-        console.log(`selected ${value}`);
-    };
-
     const navigate = useNavigate();
     const [form] = Form.useForm();
 
@@ -51,7 +45,8 @@ const LoginRegister = () => {
                         content: "Please login using your account",
                         centered: true,
                         onOk() {
-                            form.resetFields()
+                            form.resetFields(),
+                                setSection("Login")
                         }
                     })
                 }
@@ -85,20 +80,36 @@ const LoginRegister = () => {
                 content: "Username/password is not correct",
                 centered: true,
                 onOk() {
-
+                    setSection("Login");
                 },
             });
-        };
+        }
+    };
+
+    const [section, setSection] = useState('Login');
+    const onChange = ({ target: { value } }) => {
+        setSection(value);
+        form.resetFields();
     };
 
     return (
         <div className='container-center'>
-            <div className="bodylogreg">
-                <div className="titlelogreg">LOGIN <br /><span className="shapelogreg"></span></div>
+            <div className="welcome">
+                <Row justify="center" className="group">
+                    <Radio.Group
+                        defaulValue="login"
+                        buttonStyle="solid"
+                        onChange={onChange}
+                        value={section}>
+                        <Radio.Button className="login" style={{ zIndex: 0 }} value="Login">Login Here</Radio.Button>
+                        <Radio.Button value="Register">Register Here</Radio.Button>
+                    </Radio.Group>
+                </Row>
+                <div className="titlelogreg">WELCOME <br /><span className="shapelogreg"></span></div>
                 <Form
                     name="Login-form"
                     form={form}
-                    onFinish={onLogin}
+                    onFinish={section === "Login" ? onLogin : onRegister}
                     labelAlign='left'
                     labelCol={{
                         span: 7,
@@ -106,9 +117,7 @@ const LoginRegister = () => {
                     wrapperCol={{
                         span: 14,
                     }}
-                    style={{
-                        padding: '20px 20px',
-                    }}>
+                >
                     <Form.Item
                         label="Username"
                         name="username"
@@ -146,132 +155,9 @@ const LoginRegister = () => {
                         style={{
                             backgroundColor: "black"
                         }}
-                    >
-                        Login
-                    </Button>
-                </Form>
-            </div>
-            <hr />
-            <div className="bodylogreg">
-                <div className="titlelogreg">REGISTER <br /><span className="shapelogreg"></span></div>
-                <Form
-                    name="Register-form"
-                    form={form}
-                    onFinish={onRegister}
-                    labelAlign='left'
-                    labelCol={{
-                        span: 7,
-                    }}
-                    wrapperCol={{
-                        span: 14,
-                    }}
-                    style={{
-                        padding: '20px 20px',
-                    }}>
-                    <Form.Item
-                        label="Nama"
-                        name='nama'
-                        rules={[{
-                            required: true,
-                            message: "please input your name!"
-                        }]}>
-                        <Input style={{
-                            borderColor: 'black'
-                        }} placeholder='nama' />
-                    </Form.Item>
-                    <Form.Item
-                        label="Angkatan"
-                        name='angkatan'
-                        rules={[{
-                            required: true,
-                            message: 'please select the option!'
-                        }]}>
-                        <Select style={{
-                            borderColor: 'black',
-                            width: 250
-                        }}
-                            defaultValue=""
-                            onChange={handleChange}
-                            options={[
-                                { value: 'angkatan 20', label: 'angkatan 20' },
-                                { value: 'angkatan 21', label: 'angkatan 21' },
-                                { value: 'angkatan 22', label: 'angkatan 22' },
-                            ]}
-                        />
-                    </Form.Item>
-                    <Form.Item
-                        label="Prodi"
-                        name='prodi'
-                        rules={[{
-                            required: true,
-                            message: 'please select the option!'
-                        }]}>
-                        <Select className="input"
-                            defaultValue=""
-                            style={{
-                                width: 250,
-                                borderColor: "black"
-                            }}
-                            onChange={handleChange}
-                            options={[
-                                { value: 'pendidikan bahasa Inggris', label: 'Pendidikan Bahasa Inggris' },
-                                { value: 'sastra inggris', label: 'Sastra Inggris' },
-                            ]}
-                        />
-                    </Form.Item>
-                    <Form.Item
-                        name='email'
-                        label="Email"
-                        rules={[
-                            {
-                                required: true,
-                                type: 'email',
-                            },
-                        ]}
-                    >
-                        <Input style={{
-                            borderColor: 'black'
-                        }} />
-                    </Form.Item>
-                    <Form.Item
-                        label="Username"
-                        name="username"
-                        rules={[
-                            {
-                                required: true,
-                                message: "please input your username!"
-                            }
-                        ]}
-                    ><Input
-                            style={{
-                                borderColor: 'black'
-                            }}
-                            placeholder="username" />
-                    </Form.Item>
-                    <Form.Item
-                        label='Password'
-                        name="password"
-                        rules={[
-                            {
-                                required: true,
-                                message: "please input your password!"
-                            }
-                        ]}
-                    ><Input.Password
-                            style={{
-                                borderColor: 'black'
-                            }}
-                            placeholder="password" />
-                    </Form.Item>
-                    <Button
-                        type="primary"
-                        htmlType="submit"
                         loading={isRegisterLoading}
-                        style={{
-                            backgroundColor: "black"
-                        }}
                     >
-                        Register
+                        {section === 'Login' ? 'Login' : 'Register'}
                     </Button>
                 </Form>
             </div>

@@ -1,4 +1,4 @@
-import { baseApi } from "../config/apiService"
+import { baseApi, baseApi2 } from "../config/apiService"
 
 export const Api = {
     // API inventaris
@@ -16,6 +16,16 @@ export const Api = {
     },
     deleteInventaris: (id) => {
         return baseApi.delete(`/inventaris/${id}`);
-    }
+    },
 
+    // API aspirasi
+    getAspirasi: () => {
+        return baseApi2.get('/users');
+    },
+    createAspirasi: (body) => {
+        return baseApi2.post(`/users`, body);
+    },
+    deleteAspirasi: (id) => {
+        return baseApi2.delete(`/users/${id}`);
+    },
 }

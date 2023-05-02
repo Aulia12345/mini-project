@@ -90,7 +90,7 @@ const LandingPage = () => {
                         <li>Facing all directions which shows <b>WISDOM</b> in thingking before acting</li>
                     </ul>
                 </div>
-                <div className='lion'>
+                <div className='lionn'>
                     <p><b>LION</b></p>
                     <ul>
                         <li><b>COURAGEOUS, TOUGH,</b> and <b>CONFIDENT</b></li>

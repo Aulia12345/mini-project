@@ -14,15 +14,17 @@ export const MENU_ITEM = [
     {
         label: <Link to="/inventaris">Inventaries</Link>,
         key: "/inventaris",
-        dropdown: <div><Link to='/inventaris-admin'>Inventaris Admin</Link></div>,
+    }, {
+        label: <Link to='/inventaris-admin'>Inventaris Admin</Link>,
+        key: '/inventaris-admin'
     },
     {
         label: <Link to="/divisions">EDSA Divisions</Link>,
         key: "/divisions",
     },
     {
-        label: <Link to="/edsacare">EDSA Care</Link>,
-        key: "/edsacare",
+        label: <Link to="/aspirasi">EDSA Care</Link>,
+        key: "/aspirasi",
     },
     {
         label: <Link to="/login-register">Login Register</Link>,
