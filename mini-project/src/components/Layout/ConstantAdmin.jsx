@@ -1,5 +1,7 @@
+import { Button } from "antd";
 import { Link } from "react-router-dom";
 import './header/Header.css'
+
 
 export const MENU_ITEM = [
     {
@@ -26,5 +28,21 @@ export const MENU_ITEM = [
         label: <Link to="/login-register">Login Register</Link>,
         key: "/login-register",
 
+    },
+    {
+        label: (
+            <Link to="/">
+                <Button
+                    type="primary"
+                    onClick={() => {
+                        localStorage.removeItem("token");
+                    }}
+                    danger
+                >
+                    Logout
+                </Button>
+            </Link>
+        ),
+        key: "5",
     },
 ];

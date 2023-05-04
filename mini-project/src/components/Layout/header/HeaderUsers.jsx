@@ -1,13 +1,12 @@
-
 import { Layout, Menu, Row } from "antd";
 // eslint-disable-next-line no-unused-vars
 import React, { useState } from "react";
-import { MENU_ITEM } from "../ConstantAdmin";
+import { MENU_ITEM } from "../Constant";
 import { Link } from "react-router-dom";
 import logo from '../../../assets/EDSA logo baru item.png';
 import './Header.css'
 
-const Header = () => {
+const HeaderUsers = () => {
     const { Header } = Layout;
     const path = window.location.pathname;
     const [current, setCurrent] = useState(path);
@@ -54,4 +53,4 @@ const Header = () => {
     );
 };
 
-export default Header;
+export default HeaderUsers;

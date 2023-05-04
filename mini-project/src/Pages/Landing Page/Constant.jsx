@@ -1,5 +1,5 @@
-import kahima from '../../assets/aries.png';
-import wakahima from '../../assets/gifty.png'
+import kahima from '../../assets/bph/aries.png';
+import wakahima from '../../assets/bph/gifty.png'
 
 export const Prodi = [
     {

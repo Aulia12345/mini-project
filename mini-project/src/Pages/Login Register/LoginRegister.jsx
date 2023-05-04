@@ -73,7 +73,7 @@ const LoginRegister = () => {
 
         if (isVerified) {
             localStorage.setItem("token", true);
-            navigate("/home");
+            navigate("/");
         } else {
             Modal.warning({
                 title: "Login Failed!",
