@@ -75,7 +75,7 @@ const Inventaris = () => {
             <div style={{ display: 'flex', flexDirection: 'column' }}>
                 <span style={{ color: 'red' }}>Khusus ADMIN</span>
                 <Button onClick={handleClick} rel='noopener noreferrer' target='_blank' type="primary" style={{ backgroundColor: 'black', width: 200 }}>
-                    EDSA Care Report
+                    Inventaris Admin
                 </Button>
             </div>
         </div>
