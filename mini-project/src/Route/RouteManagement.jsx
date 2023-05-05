@@ -1,7 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import LandingPage from '../Pages/Landing Page/LandingPage';
 import LayoutComponent from '../components/Layout/LayoutComponent';
-import LayoutComponentUsers from '../components/Layout/LayoutComponentUsers'
 import { Suspense } from 'react';
 import InventarisAdmin from '../Pages/Inventaris/InventarisAdmin';
 import Inventaris from '../Pages/Inventaris/Inventaris'
@@ -12,6 +11,7 @@ import Divisions from '../Pages/Divisions/Divisions'
 
 const RouteManagement = () => {
     const token = localStorage.getItem('token');
+
     // const navigate = useNavigate();
 
     // useEffect(() => {
@@ -25,7 +25,7 @@ const RouteManagement = () => {
         <div>
             <Suspense>
                 {!token ? (
-                    <LayoutComponentUsers>
+                    <LayoutComponent>
                         <Routes>
                             <Route path='/' element={<LandingPage />} />
                             <Route path='/inventaris' element={<Inventaris />} />
@@ -33,7 +33,7 @@ const RouteManagement = () => {
                             <Route path='/aspirasi' element={<Aspirasi />} />
                             <Route path='/divisions' element={<Divisions />} />
                         </Routes>
-                    </LayoutComponentUsers>
+                    </LayoutComponent>
                 ) : (
                     <LayoutComponent>
                         <Routes>

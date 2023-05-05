@@ -1,3 +1,27 @@
-MENU_ITEM:hover {
-    background-color: #2d2d2d;
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -18px;
+}
+
+.linknavbar {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.textlink {
+    color: black;
+    font-family: 'Gill Sans', sans-serif;
+    padding: 0pc 5px;
+}
+
+.textlink:hover {
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 0px 5px;
 }

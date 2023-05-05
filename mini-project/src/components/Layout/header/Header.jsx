@@ -1,8 +1,7 @@
 
-import { Layout, Menu, Row } from "antd";
+import { Layout, Button } from "antd";
 // eslint-disable-next-line no-unused-vars
 import React, { useState } from "react";
-import { MENU_ITEM } from "../ConstantAdmin";
 import { Link } from "react-router-dom";
 import logo from '../../../assets/EDSA logo baru item.png';
 import './Header.css'
@@ -11,9 +10,7 @@ const Header = () => {
     const { Header } = Layout;
     const path = window.location.pathname;
     const [current, setCurrent] = useState(path);
-    const onClick = (e) => {
-        setCurrent(e.key);
-    };
+    const token = localStorage.getItem('token');
 
     return (
         <Header
@@ -25,7 +22,7 @@ const Header = () => {
                 backgroundColor: "white"
             }}
         >
-            <Row justify="space-between">
+            <div className="navbar">
                 <Link to="/">
                     <img
                         src={logo} alt=""
@@ -33,24 +30,42 @@ const Header = () => {
                             float: "left",
                             width: 65,
                             height: 55,
-                            margin: "5px 24px 0px 0",
+
 
                         }}
                         onClick={() => setCurrent("")}
                     />
                 </Link>
-                <Menu
-                    mode="horizontal"
-                    items={MENU_ITEM}
-                    disabledOverflow
-                    onClick={onClick}
-                    selectedKeys={[current]}
-                    style={{
-                        height: 64,
-                    }}
-                />
-            </Row>
-        </Header>
+                <div className="linknavbar">
+                    <Link to={"/"}><p className="textlink">Home</p>
+                    </Link>
+                    <Link to={"/news"}><p className="textlink">News</p>
+                    </Link>
+                    <Link to={"/inventaris"}><p className="textlink">Inventaries</p>
+                    </Link>
+                    <Link to={"/divisions"}><p className="textlink">EDSA Divisions</p>
+                    </Link>
+                    <Link to={"/aspirasi"}><p className="textlink">EDSA Care</p>
+                    </Link>
+                    <Link to={"/login-register"}>< p className="textlink">Login Register</p></Link>
+                    <Link to={'/'}>
+                        {token && <Button
+                            style={{
+                                marginTop: '25px'
+                            }}
+                            type="primary"
+                            onClick={() => {
+                                localStorage.removeItem("token");
+                            }}
+                            danger
+                        >
+                            Logout
+                        </Button>
+                        }
+                    </Link>
+                </div>
+            </div>
+        </Header >
     );
 };
 
