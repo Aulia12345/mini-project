@@ -3,6 +3,7 @@ import { Layout, Button } from "antd";
 // eslint-disable-next-line no-unused-vars
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useLoginToken } from '../../../hooks/use-login-token';
 import logo from '../../../assets/EDSA logo baru item.png';
 import './Header.css'
 
@@ -10,7 +11,7 @@ const Header = () => {
     const { Header } = Layout;
     const path = window.location.pathname;
     const [current, setCurrent] = useState(path);
-    const token = localStorage.getItem('token');
+    const token = useLoginToken();
 
     return (
         <Header

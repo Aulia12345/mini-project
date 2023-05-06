@@ -7,10 +7,11 @@ import Inventaris from '../Pages/Inventaris/Inventaris'
 import LoginRegister from '../Pages/Login Register/LoginRegister';
 import Aspirasi from '../Pages/Aspirasi/Aspirasi';
 import AspirasiAdmin from '../Pages/Aspirasi/AspirasiAdmin';
-import Divisions from '../Pages/Divisions/Divisions'
+import Divisions from '../Pages/Divisions/Divisions';
+import { useLoginToken } from '../hooks/use-login-token';
 
 const RouteManagement = () => {
-    const token = localStorage.getItem('token');
+    const token = useLoginToken();
 
     // const navigate = useNavigate();
 
