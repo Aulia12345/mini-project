@@ -1,6 +1,11 @@
+.main {
+    margin: 0px !important;
+    padding: 0px !important;
+}
+
 .section {
     margin: 0px;
-    padding: 100px 0px;
+    padding: 100px 40px;
     background-image: url('../../assets/IMG_8347.JPG');
     background-size: cover;
     background-position: center;
