@@ -9,7 +9,7 @@ import wave from '../../assets/wave.png'
 
 const LandingPage = () => {
     return (
-        <div>
+        <div style={{ margin: 0, padding: 0 }}>
             <section className='section'>
                 <div className='judul'>
                     <div className='judulAnim'>
