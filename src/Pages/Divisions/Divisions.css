@@ -1,0 +1,137 @@
+.titlemainstruktural {
+    margin: 0px;
+    padding: 100px 40px;
+    min-height: 550px;
+    background: url('../../assets/IMG_8347.JPG');
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+    background-clip: border-box;
+}
+
+.titlestruktural {
+    font-size: 30px;
+    padding: 150px;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Gill Sans', sans-serif;
+    color: white;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.bphdiv,
+.bid2,
+.bid4 {
+    font-family: 'Gill Sans', sans-serif;
+    padding-bottom: 40px;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url('../../assets/bg edsa.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+    background-clip: border-box;
+}
+
+.shapediv {
+    width: 200px;
+    height: 3px;
+    background-color: white;
+    margin-bottom: 50px;
+}
+
+.shapediv2 {
+    width: 1000px;
+    height: 20px;
+    background-color: #2d2d2d;
+    margin-bottom: 50px;
+}
+
+.shapediv3 {
+    background-color: #3f4448;
+    width: 1000px;
+    height: 20px;
+    margin-bottom: 50px;
+}
+
+.shapediv2a {
+    width: 200px;
+    height: 3px;
+    background-color: black;
+    margin-bottom: 50px;
+}
+
+.div1,
+.div2 {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 50px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.titlebphdiv,
+.titlebid1 {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.titlebphdiv {
+    color: white;
+}
+
+.jabatanbphdiv {
+    background-color: white;
+    font-family: 'Gill Sans', sans-serif;
+    color: black;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 10px;
+    text-align: center;
+    margin-top: -10px;
+    font-size: 18px;
+    align-items: center;
+    width: 200px;
+}
+
+.namabphdiv {
+    font-size: 15px;
+    text-align: center;
+    align-items: center;
+}
+
+.bid1,
+.bid3 {
+    padding-top: 20px;
+    padding-bottom: 40px;
+    font-family: 'Gill Sans', sans-serif;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url('../../assets/bg gelombang.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+    background-clip: border-box;
+}
+
+.titlebid1 {
+    color: black;
+}
+
+.colbid1 {
+    background-color: white !important;
+    color: white !important;
+    border-color: #2d2d2d !important;
+    border-width: 2px;
+    box-shadow: 0px 0px 20px 0px #000;
+}
+
+.bid2 {
+    padding-top: 20px;
+}

@@ -1,0 +1,100 @@
+.inventaris {
+    background-image: url('../../assets/bg edsa.jpg');
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0px;
+    padding: 5px 40px;
+}
+
+.form {
+    width: 600px;
+    height: 280px;
+}
+
+input {
+    width: 400px;
+    height: 30px;
+    border-radius: 10px;
+}
+
+.title,
+.title2 {
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Gill Sans', sans-serif;
+    font-weight: bold;
+}
+
+.logoputih {
+    width: 200px;
+    height: 200px;
+    float: right;
+    margin-bottom: 20px;
+
+    animation: myAnim 1s ease 0s 1 normal forwards;
+}
+
+@keyframes myAnim {
+    0% {
+        opacity: 0;
+        transform: scale(0.6);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+.logoputih2 {
+    width: 100px;
+    height: 100px;
+    image-rendering: auto;
+
+    image-rendering: pixelated;
+}
+
+.title2,
+.logoputih2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 10px 0px 10px 0px;
+}
+
+.penyewaan {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0px 50px 0px;
+}
+
+.shape {
+    background-color: white;
+    width: 150px;
+    height: 3px;
+}
+
+.judulsewa {
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+    font-family: 'Gill Sans', sans-serif;
+}
+
+.infosewa {
+    font-size: 20px;
+    color: white;
+    font-family: 'Gill Sans', sans-serif;
+}
+
+.gform {
+    justify-content: center;
+    align-items: center;
+
+}
