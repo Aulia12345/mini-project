@@ -190,7 +190,7 @@ const Divisions = () => {
             </div>
             <div className='bid4'>
                 <div className='shapediv3'></div>
-                <p className='titlebphdiv'><b>Bidang Minat Bakat</b></p>
+                <p className='titlebphdiv'><b>Bidang Ekonomi Kreatif</b></p>
                 <div className='shapediv'></div>
                 <Collapse className='colbid1' colorText='#fff' accordion style={{ width: 1000 }}>
                     {descbid4.map((item) => (
