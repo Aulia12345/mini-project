@@ -27,11 +27,6 @@ const Inventaris = () => {
 
     const TABLE_COLUMNS = [
         {
-            title: "No. ",
-            dataIndex: "id",
-            key: "id"
-        },
-        {
             title: 'Nama Barang',
             dataIndex: 'namaBarang',
             key: 'namaBarang'
@@ -142,7 +137,7 @@ const Inventaris = () => {
                     span: 14,
                 }}
                 style={{
-                    width: 500
+                    width: 700
                 }}
                 fields={[
                     {
