@@ -1,26 +1,21 @@
-import gambar1 from '../../assets/lekempret.jpg';
-
-import gambar4 from '../../assets/evta.jpg';
+import gambar1 from '../../assets/od.jpg';
+import gambar2 from '../../assets/aoe.jpg';
+import gambar3 from '../../assets/espo.jpg';
 
 export const kegiatan = [
     {
         gambar: gambar1,
-        judul: 'LKMM pra-TD dan EpilionFest 2022',
-        tanggal: '01 - 02 Oktober 2022'
+        judul: 'Open Dialogue 2023',
+        tanggal: '25 April 2023'
     },
     {
-
-        judul: 'LKMM TD 2022',
-        tanggal: '22 - 23 Oktober 2022'
+        gambar: gambar2,
+        judul: 'LKMM TD 2023',
+        tanggal: '19 Mei 2023'
     },
     {
-
-        judul: 'English Week XXVII 2022',
-        tanggal: '04 November 2022'
-    },
-    {
-        gambar: gambar4,
-        judul: 'Evaluasi Tahunan HMJ EDSA Unesa peirode 2021/2022',
-        tanggal: '10-12 Januari 2023'
+        gambar: gambar3,
+        judul: 'ESPORACO 2023',
+        tanggal: '20 Mei 2023'
     },
 ]

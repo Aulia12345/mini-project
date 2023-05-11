@@ -1,18 +1,16 @@
-import React from 'react';
-import { Carousel } from 'antd';
+/* eslint-disable react/jsx-key */
+import { Carousel, Card, Col, Row } from 'antd';
 import './News.css';
-import gambar from '../../assets/lekempret.jpg'
+import { kegiatan } from './Constant';
 
 const News = () => {
 
-    const onChange = (currentSlide) => {
-        console.log(currentSlide);
-    };
+    const { Meta } = Card;
 
     return (
-        <div>
+        <div className='carousel'>
             <h2 className='judulnews'>HMJ EVENTS</h2>
-            <Carousel afterChange={onChange}>
+            <Carousel autoplay>
                 <div className='carouseldiv'>
                     <h2 className='carouseltext'>LKMM pra-TD dan EpilionFest 2022</h2>
                     <p>01-02 Oktober 2022</p>
@@ -29,8 +27,30 @@ const News = () => {
                     <h2 className='carouseltext'>Evaluasi HMJ EDSA periode 2021/2022</h2>
                     <p>10-12 Januari 2023</p>
                 </div>
-
             </Carousel>
+
+            <div className='upcoming'>
+                <h2 style={{ marginTop: 20, backgroundColor: "white", color: 'black' }} className='judulnews'>Upcoming Events</h2>
+                <div style={{ marginTop: 50 }}>
+                    <Row gutter={10} justify={'center'}>
+                        {kegiatan.map((item) => (
+                            <Col span={5}>
+                                <Card
+                                    hoverable
+                                    style={{
+                                        width: 200,
+                                        height: 400
+                                    }}
+                                    className='cardevent'
+                                    cover={<img style={{ height: 300, width: 200 }} alt="example" src={item.gambar} />}
+                                >
+                                    <Meta title={item.judul} description={item.tanggal} />
+                                </Card>
+                            </Col>
+                        ))}
+                    </Row>
+                </div>
+            </div>
         </div>
     );
 }
