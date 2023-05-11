@@ -11,7 +11,7 @@ const News = () => {
 
     return (
         <div>
-            <h2 className='judul2'>HMJ EVENTS</h2>
+            <h2 className='judulnews'>HMJ EVENTS</h2>
             <Carousel afterChange={onChange}>
                 <div className='carouseldiv'>
                     <h2 className='carouseltext'>LKMM pra-TD dan EpilionFest 2022</h2>
