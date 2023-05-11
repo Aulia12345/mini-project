@@ -93,7 +93,7 @@ const LoginRegister = () => {
     };
 
     return (
-        <div className='container-center'>
+        <div className='container-center' style={{ marginTop: 10 }}>
             <div className="welcome">
                 <Row justify="center" className="group">
                     <Radio.Group

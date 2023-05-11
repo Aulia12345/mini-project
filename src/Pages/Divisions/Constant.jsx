@@ -25,10 +25,13 @@ import kabid3 from '../../assets/bidang3/putal.png';
 import sekbid3 from '../../assets/bidang3/fimma.png';
 import kesma1 from '../../assets/bidang3/rifky.png';
 import kesma2 from '../../assets/bidang3/axel.png';
+import kesma3 from '../../assets/bidang3/fardib.png';
 import deplu1 from '../../assets/bidang3/deplu.png';
+import deplu2 from '../../assets/bidang3/kikik.png';
 import info1 from '../../assets/bidang3/andika.png';
 import info2 from '../../assets/bidang3/danang.png';
 import info3 from '../../assets/bidang3/yulian.png';
+import info4 from '../../assets/bidang3/aqil.png';
 import kabid4 from '../../assets/bidang4/vabrine.png';
 import sekbid4 from '../../assets/bidang4/dayat.png';
 import market1 from '../../assets/bidang4/dzaqia.png';
@@ -272,6 +275,7 @@ export const kesma = [
     {
         title: 'Kesma',
         nama: 'Amanda Isna',
+        foto: kesma3,
         div: 'div2'
     },
     {
@@ -286,6 +290,7 @@ export const deplu = [
     {
         title: 'Deplu',
         nama: 'Ilham Abadi',
+        foto: deplu2,
         div: 'div2'
     },
     {
@@ -312,6 +317,7 @@ export const infokom = [
     {
         title: 'Infokom',
         nama: 'Daiva Rizki',
+        foto: info4,
         div: "div2"
     },
     {

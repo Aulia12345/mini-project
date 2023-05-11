@@ -1,17 +1,39 @@
 
-import { Layout, Button } from "antd";
+import { Layout, Button, Dropdown, Space } from "antd";
 // eslint-disable-next-line no-unused-vars
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
 import { useLoginToken } from '../../../hooks/use-login-token';
 import logo from '../../../assets/EDSA logo baru item.png';
 import './Header.css'
+import { usePathName } from "./Hook/useLink";
+import { DownOutlined } from "@ant-design/icons";
 
 const Header = () => {
     const { Header } = Layout;
-    const path = window.location.pathname;
+    const path = usePathName();
+    console.log(path)
+    // eslint-disable-next-line no-unused-vars
     const [current, setCurrent] = useState(path);
     const token = useLoginToken();
+
+    const navStyles = ({ isActive }) => {
+        return {
+            fontWeight: isActive ? 'bold' : 'normal',
+        }
+    }
+
+    // dropdown
+    const items = [
+        {
+            key: '1',
+            label: (<NavLink to={'/inventaris'}>Inventaris</NavLink>)
+        },
+        {
+            key: '2',
+            label: (<NavLink to={'/inventaris-admin'}>Inventaris Admin</NavLink>)
+        }
+    ];
 
     return (
         <Header
@@ -23,8 +45,8 @@ const Header = () => {
                 backgroundColor: "white"
             }}
         >
-            <div className="navbar">
-                <Link to="/">
+            <nav className="navbar">
+                <NavLink to="/">
                     <img
                         src={logo} alt=""
                         style={{
@@ -36,20 +58,24 @@ const Header = () => {
                         }}
                         onClick={() => setCurrent("")}
                     />
-                </Link>
-                <div className="linknavbar">
-                    <Link to={"/"}><p className="textlink">Home</p>
-                    </Link>
-                    <Link to={"/news"}><p className="textlink">News</p>
-                    </Link>
-                    <Link to={"/inventaris"}><p className="textlink">Inventaries</p>
-                    </Link>
-                    <Link to={"/divisions"}><p className="textlink">EDSA Divisions</p>
-                    </Link>
-                    <Link to={"/aspirasi"}><p className="textlink">EDSA Care</p>
-                    </Link>
-                    <Link to={"/login-register"}>< p className="textlink">Login Register</p></Link>
-                    <Link to={'/'}>
+                </NavLink>
+                <nav className="linknavbar" onClick={() => setCurrent("")}>
+                    <NavLink style={navStyles} to={"/"} ><p className="textlink">Home</p>
+                    </NavLink>
+                    <NavLink style={navStyles} to={"/news"}><p className="textlink">News</p>
+                    </NavLink>
+                    <Dropdown className="linknavbarD"
+                        menu={{ items }}>
+                        <NavLink onClick={(e) => e.preventDefault()}>
+                            <Space className="textlink">Inventaris <DownOutlined /></Space>
+                        </NavLink>
+                    </Dropdown>
+                    <NavLink style={navStyles} to={"/divisions"}><p className="textlink">EDSA Divisions</p>
+                    </NavLink>
+                    <NavLink style={navStyles} to={"/aspirasi"}><p className="textlink">EDSA Care</p>
+                    </NavLink>
+                    <NavLink style={navStyles} to={"/login-register"}>{!token && < p className="textlink">Login Register</p>}</NavLink>
+                    <NavLink to={'/'}>
                         {token && <Button
                             style={{
                                 marginTop: '25px'
@@ -63,9 +89,9 @@ const Header = () => {
                             Logout
                         </Button>
                         }
-                    </Link>
-                </div>
-            </div>
+                    </NavLink>
+                </nav>
+            </nav>
         </Header >
     );
 };

@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-key */
 import './LandingPage.css';
-import { Card, Col, Row, Button } from 'antd'
+import { Card, Col, Row } from 'antd'
 import { InstagramOutlined, YoutubeOutlined } from '@ant-design/icons'
 import { Prodi, Bph } from './Constant';
 import logo from '../../assets/EDSA logo baru item.png'
@@ -36,7 +36,6 @@ const LandingPage = () => {
                                 <Card className='card' key={item.key}>
                                     <p className='judul5'>{item.title}</p>
                                     <p className='text'>{item.text}</p>
-                                    <Button className='button' type="primary" style={{ background: "black", marginTop: 10 }}>more...</Button>
                                 </Card>
                             </Col>
                         ))}

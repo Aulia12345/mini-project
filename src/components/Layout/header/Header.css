@@ -6,7 +6,8 @@
     margin-top: -18px;
 }
 
-.linknavbar {
+.linknavbar,
+.linknavbarD {
     display: flex;
     flex-direction: row;
     gap: 40px;
@@ -15,10 +16,18 @@
 .textlink {
     color: black;
     font-family: 'Gill Sans', sans-serif;
-    padding: 0pc 5px;
+    padding: 0px 5px;
 }
 
 .textlink:hover {
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 0px 5px;
+}
+
+.textlink:active {
     background-color: black;
     color: white;
     border-radius: 5px;

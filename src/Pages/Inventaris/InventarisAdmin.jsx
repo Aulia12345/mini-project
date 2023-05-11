@@ -121,7 +121,9 @@ const Inventaris = () => {
     const [isEdit, setIsEdit] = useState(false);
 
     return (
-        <div className='inventaris'>
+        <div className='inventaris' style={{
+            marginTop: 10
+        }}>
             <Title className='title' style={{
                 color: 'white'
             }}>List Inventaris HMJ EDSA</Title>
@@ -138,6 +140,9 @@ const Inventaris = () => {
                 }}
                 wrapperCol={{
                     span: 14,
+                }}
+                style={{
+                    width: 500
                 }}
                 fields={[
                     {
@@ -189,10 +194,11 @@ const Inventaris = () => {
                         message: 'please choose the select'
                     }]}>
                     <Select
-                        defaultValue="Baik"
-                        style={{ width: 120 }}
+                        placeholder='click here'
+                        style={{ width: 400 }}
                         onChange={handleChange}
                         options={[
+                            { value: '' },
                             { value: 'baik', label: 'Baik' },
                             { value: 'kurang baik', label: 'Kurang Baik' },
                             { value: 'rusak', label: 'Rusak' },

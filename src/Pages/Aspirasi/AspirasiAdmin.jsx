@@ -76,7 +76,9 @@ const AspirasiAdmin = () => {
     };
 
     return (
-        <div className='edsacareadmin'>
+        <div className='edsacareadmin' style={{
+            marginTop: 10
+        }}>
             <div className='titleshape2'>
                 <h2 className='titlecare'>Report EDSA Care</h2>
                 <div className='shapecare2'></div>

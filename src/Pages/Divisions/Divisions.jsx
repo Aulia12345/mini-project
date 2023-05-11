@@ -11,7 +11,9 @@ const Divisions = () => {
     const { Panel } = Collapse;
 
     return (
-        <div className='struktural'>
+        <div className='struktural' style={{
+            marginTop: 10
+        }}>
             <div className='titlemainstruktural'>
                 <h2 className='titlestruktural'>STRUKTURAL FUNGSIONARIS<br />HMJ EDSA UNESA 2023/2024</h2>
             </div>

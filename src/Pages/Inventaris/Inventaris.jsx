@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { Typography, Table, Button } from 'antd';
+import { Typography, Table } from 'antd';
 import './InventarisAdmin.css';
 import '@ant-design/colors';
 import logo from '../../assets/EDSA logo baru putih.png';
@@ -48,7 +48,9 @@ const Inventaris = () => {
     ];
 
     return (
-        <div className='inventaris'>
+        <div className='inventaris' style={{
+            marginTop: 10
+        }}>
             <div className='title2'>
                 <Title className='title2' style={{
                     color: 'white'
@@ -72,12 +74,6 @@ const Inventaris = () => {
                 <iframe className='gform' src="https://docs.google.com/forms/d/e/1FAIpQLSf43jp4LvVtE7pr-iPsVrjVZcfwudzI7Jjqpb2E1nUwjxx_JQ/viewform?embedded=true" width="800" height="620" border="none">Memuat…</iframe>
             </div>
 
-            <div style={{ display: 'flex', flexDirection: 'column' }}>
-                <span style={{ color: 'red' }}>Khusus ADMIN</span>
-                <Button onClick={handleClick} rel='noopener noreferrer' target='_blank' type="primary" style={{ backgroundColor: 'black', width: 200 }}>
-                    Inventaris Admin
-                </Button>
-            </div>
         </div>
     );
 }

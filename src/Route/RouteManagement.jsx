@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { Route, Routes } from 'react-router-dom';
 import LandingPage from '../Pages/Landing Page/LandingPage';
 import LayoutComponent from '../components/Layout/LayoutComponent';
@@ -8,6 +9,7 @@ import LoginRegister from '../Pages/Login Register/LoginRegister';
 import Aspirasi from '../Pages/Aspirasi/Aspirasi';
 import AspirasiAdmin from '../Pages/Aspirasi/AspirasiAdmin';
 import Divisions from '../Pages/Divisions/Divisions';
+import News from '../Pages/News/News';
 import { useLoginToken } from '../hooks/use-login-token';
 
 const RouteManagement = () => {
@@ -29,6 +31,7 @@ const RouteManagement = () => {
                     <LayoutComponent>
                         <Routes>
                             <Route path='/' element={<LandingPage />} />
+                            <Route path='/news' element={<News />} />
                             <Route path='/inventaris' element={<Inventaris />} />
                             <Route path='/login-register' element={<LoginRegister />} />
                             <Route path='/aspirasi' element={<Aspirasi />} />
