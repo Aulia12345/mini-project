@@ -42,6 +42,7 @@ const RouteManagement = () => {
                     <LayoutComponent>
                         <Routes>
                             <Route path='/' element={<LandingPage />} />
+                            <Route path='/news' element={<News />} />
                             <Route path='/inventaris' element={<Inventaris />} />
                             <Route path='/login-register' element={<LoginRegister />} />
                             <Route path='/inventaris-admin' element={<InventarisAdmin />} />

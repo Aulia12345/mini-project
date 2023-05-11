@@ -2,6 +2,7 @@
 import { Carousel, Card, Col, Row } from 'antd';
 import './News.css';
 import { kegiatan } from './Constant';
+import { InstagramOutlined } from '@ant-design/icons'
 
 const News = () => {
 
@@ -34,17 +35,18 @@ const News = () => {
                 <div style={{ marginTop: 50 }}>
                     <Row gutter={10} justify={'center'}>
                         {kegiatan.map((item) => (
-                            <Col span={5}>
+                            <Col span={6}>
                                 <Card
                                     hoverable
                                     style={{
-                                        width: 200,
-                                        height: 400
+                                        width: 250,
+                                        height: 480
                                     }}
                                     className='cardevent'
-                                    cover={<img style={{ height: 300, width: 200 }} alt="example" src={item.gambar} />}
+                                    cover={<img style={{ height: 350, width: 250 }} alt="example" src={item.gambar} />}
                                 >
-                                    <Meta title={item.judul} description={item.tanggal} />
+                                    <p style={{ fontWeight: 'bold', fontSize: 15, marginTop: -10 }}>{item.judul} <br /> <span> {item.tanggal}</span></p>
+                                    <a href={item.link}><InstagramOutlined style={{ color: 'black' }} /><span style={{ color: 'black', marginLeft: 10 }}>more...</span></a>
                                 </Card>
                             </Col>
                         ))}
